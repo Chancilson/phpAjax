@@ -26,7 +26,7 @@
 
                     <input type="hidden" name="hidden_name" id="name'.$row["id"].'" value ="'.$row["nome"].'"/>
 
-                    <input type="hidden" name="hidden_price" id="price'.$row["id"].'" value="'$row["senha"].'"/>
+                    <input type="hidden" name="hidden_price" id="price'.$row["id"].'" value="'.$row["senha"].'"/>
 
                     <input type="button" name ="add_to_cart" id="'.$row["id"].'" style="margin-top:5px;" class="btn btn-success form-control add_to_cart" value= "Add to Cart"/>
 
