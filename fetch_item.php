@@ -2,7 +2,7 @@
     //fetch_item.php
 
     include('database_connection.php');
-    $query = "SELECT * FROM users ORDER BY id DESC";
+    $query = "SELECT * FROM users ORDER BY id_user DESC";
 
     $statement = $connect->prepare($query);
 
