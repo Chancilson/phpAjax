@@ -30,7 +30,7 @@
                             <span class="sr-only">Menu</span>
                             <span class="glyphicon glyphicon-menu-humburguer"></span>
                         </button>
-                        <a href="/" class="nava-brand">Weblesson</a>
+                        <a href="#" class="nava-brand">Weblesson</a>
                     </div>
                     
                     <div id="navbar-cart" class="navbar-collapse collapse">
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div id="display_item">
+            <div id="display_item" class="row">
 
             </div>
 
