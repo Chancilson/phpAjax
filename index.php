@@ -132,7 +132,7 @@
 
            var product_name = $('#name'+product_id+'').val();
            var product_price = $('#price'+product_id+'').val();
-           var product_quantity = $('#quantity'+product_id).val();
+           var product_quantity = $('#quantity'+product_id+'').val();
            var action = "add";
            if(product_quantity > 0)
            {

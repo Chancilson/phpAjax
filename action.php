@@ -17,12 +17,12 @@
                 foreach($_SESSION["shopping_cart"] as $keys => $values)
                 {
                     //This condition will value a paricular product id witch we've add into car, is already added into car or not?
-                    if ($_SESSION["shopping_cart"][$keys]['product_id']==$_POST["product_id"]) {
+                    if ($_SESSION["shopping_cart"][$keys]['product_id'] == $_POST["product_id"]) {
                         //
                         $is_available++;
 
                         //This line of code will increase particular product quantity with value $_POST["product_quantity"] variable
-                        $_SESSION["shopping_cart"][$keys]['product_quantity'] += $_POST["product_quantity"];
+                        $_SESSION["shopping_cart"][$keys]['product_quantity'] = $_SESSION["shoppin_cart"][$keys]['product_quantity'] + $_POST["product_quantity"];
                     }
                 }
 
