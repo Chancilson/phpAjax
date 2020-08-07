@@ -69,6 +69,9 @@
 </html>
 <script>
     $(document).ready(function(){
+
+        load_product();
+
         function load_product()
         {
             $ajax({
