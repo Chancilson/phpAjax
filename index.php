@@ -103,8 +103,10 @@
                 {
                     //This line wil display shopping cart details under this tag
                     $('#cart_details').html(data.cart_details);
+
                     //This line will display total of all cards under this tag
                     $('.total_price').text(data.total_price);
+
                     //This code will display total number of items witch  we've added into car
                     $('.badge').text(data.total_item);
                 }
@@ -120,6 +122,40 @@
             content: function(){
                 return $('#popover_content_wrapper').html();
             }
+        });
+
+        //This code will execute when we clic on "Add to car" Button witch is on each cart.
+        $('document').on('click','.add_to_cart', function()
+        {
+            //This line of code will fetch values from id attribute
+           var product_id = $(this).attr("id");
+
+           var product_name = $('#name'+product_id+'').val();
+           var product_price = $('#price'+product_id+'').val();
+           var product_quantity = $('#quantity'+product_id).val();
+           var action = "add";
+           if(product_quantity > 0)
+           {
+                $.ajax({
+                    url: "action.php",
+                    method: "POST",
+
+                    //This line of code defines witch datas will be sent to server
+                    data: {
+                        product_id: product_id, 
+                        product_name: product_name, product_price: product_price, product_quantity: product_quantity, action: action
+                    },
+                    success:function()
+                    {
+                        //This function will display shopping cart details on web page
+                        load_card_data();
+                        alert('Item has been Added into Cart');
+                    }
+                });
+           }else
+           {
+                alert("Lease Enter Number of Quantity");
+           }
         });
 
     });
