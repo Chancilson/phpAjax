@@ -10,6 +10,7 @@
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/
     bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <style>
         .popover{
@@ -74,7 +75,7 @@
 
         function load_product()
         {
-            $ajax({
+            $.ajax({
                 url: "fetch_item.php",
                 method: "POST",
                 success:function(data)
