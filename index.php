@@ -130,7 +130,7 @@
             //This line of code will fetch values from id attribute
            var product_id = $(this).attr("id");
 
-           var product_name = $('#name'+product_id+'').val();
+           var product_name = $('#name'+product_id+'').va();
            var product_price = $('#price'+product_id+'').val();
            var product_quantity = $('#quantity'+product_id+'').val();
            var action = "add";
@@ -142,10 +142,10 @@
 
                     //This line of code defines witch datas will be sent to server
                     data: {
-                        product_id: product_id, 
-                        product_name: product_name, product_price: product_price, product_quantity: product_quantity, action: action
+                        product_id:product_id, 
+                        product_name: product_name, product_price:product_price, product_quantity:product_quantity, action:action
                     },
-                    success:function()
+                    success:function(data)
                     {
                         //This function will display shopping cart details on web page
                         load_card_data();
